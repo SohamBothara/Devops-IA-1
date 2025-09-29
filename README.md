@@ -1,64 +1,66 @@
-# 🧪 TestNG + Maven Quick Start
+# 🧪 TestNG + Maven Project (DevOps Case Study)
 
-This is a minimal **TestNG + Maven** project with **GitHub Actions CI** integration.
+This repository demonstrates how to use **TestNG** with **Maven** and **GitHub Actions CI**.  
+It is part of a DevOps case study project showing how automated testing fits into modern pipelines.
 
 ---
 
-## 🚀 Quick Setup
+## 🚀 Quick Start
 
 ### 1. Clone Repo
-```bash
 git clone https://github.com/YOUR_USERNAME/testng-maven-repo.git
 cd testng-maven-repo
-2. Install Requirements
-JDK 11+
 
+###2. Install Requirements
+JDK 11+
 Maven 3+
 
-Verify:
 
-bash
-Copy code
+###Verify:
 java -version
 mvn -v
-▶️ Run Tests
-From IntelliJ
+
+
+###3. Run Tests
+From IntelliJ IDEA
 Right-click SimpleTest.java → Run 'SimpleTest'
 
-Reports generated in:
 
-bash
-Copy code
+###Report generated at:
 test-output/index.html
-From Maven
-bash
-Copy code
+
+###From Maven CLI
 mvn clean test
 Reports generated in:
-
 test-output/index.html (TestNG native HTML report)
-
 target/surefire-reports/ (Maven test reports)
 
-Optional HTML site:
-
-bash
-Copy code
+Optional full HTML site:
 mvn surefire-report:report
 open target/site/surefire-report.html
-🤖 CI/CD with GitHub Actions
-The workflow in .github/workflows/maven.yml runs automatically on every push/PR.
 
-It:
+###📂 Project Structure
+testng-maven-repo/
+├── .github/workflows/maven.yml   # GitHub Actions workflow
+├── pom.xml                       # Maven config with TestNG dependency
+├── src/
+│   └── test/
+│       ├── java/com/example/SimpleTest.java   # Sample TestNG test class
+│       └── resources/testng.xml               # TestNG suite config
+└── README.md
 
+###⚡ Features
+TestNG framework with annotations (@Test, @BeforeClass, etc.)
+Sample tests with assertions and soft asserts
+Suite configuration via testng.xml
+Maven build & Surefire plugin integration
+GitHub Actions workflow:
+Runs tests automatically on push/PR
+Uploads test-output and surefire-reports as artifacts
+
+###🤖 Continuous Integration (GitHub Actions)
+Workflow: .github/workflows/maven.yml
+It runs automatically on push/PR to main or dev:
+Checks out repo
 Sets up JDK 11
-
-Runs mvn test
-
-Uploads test-output and surefire-reports as build artifacts
-
-Build Status
-markdown
-Copy code
-![Java CI](https://github.com/YOUR_USERNAME/testng-maven-repo/actions/workflows/maven.yml/badge.svg)
-✅ What You Learn
+Runs mvn clean test
