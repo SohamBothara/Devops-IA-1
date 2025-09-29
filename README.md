@@ -7,29 +7,26 @@ It is part of a DevOps case study project showing how automated testing fits int
 
 ## 🚀 Quick Start
 
-### 1. Clone Repo
+1. Clone Repo
 git clone https://github.com/YOUR_USERNAME/testng-maven-repo.git
 cd testng-maven-repo
 
-###2. Install Requirements
+2. Install Requirements
 JDK 11+
 Maven 3+
 
-
-###Verify:
+Verify:
 java -version
 mvn -v
 
 
-###3. Run Tests
-From IntelliJ IDEA
-Right-click SimpleTest.java → Run 'SimpleTest'
+3. Run Tests-> From IntelliJ IDEA ->Right-click SimpleTest.java → Run 'SimpleTest'
 
-
-###Report generated at:
+Report generated at:
 test-output/index.html
 
-###From Maven CLI
+
+From Maven CLI
 mvn clean test
 Reports generated in:
 test-output/index.html (TestNG native HTML report)
@@ -39,7 +36,7 @@ Optional full HTML site:
 mvn surefire-report:report
 open target/site/surefire-report.html
 
-###📂 Project Structure
+📂 Project Structure
 testng-maven-repo/
 ├── .github/workflows/maven.yml   # GitHub Actions workflow
 ├── pom.xml                       # Maven config with TestNG dependency
@@ -49,7 +46,7 @@ testng-maven-repo/
 │       └── resources/testng.xml               # TestNG suite config
 └── README.md
 
-###⚡ Features
+⚡ Features
 TestNG framework with annotations (@Test, @BeforeClass, etc.)
 Sample tests with assertions and soft asserts
 Suite configuration via testng.xml
@@ -58,7 +55,7 @@ GitHub Actions workflow:
 Runs tests automatically on push/PR
 Uploads test-output and surefire-reports as artifacts
 
-###🤖 Continuous Integration (GitHub Actions)
+🤖 Continuous Integration (GitHub Actions)
 Workflow: .github/workflows/maven.yml
 It runs automatically on push/PR to main or dev:
 Checks out repo
