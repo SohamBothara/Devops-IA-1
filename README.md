@@ -36,15 +36,6 @@ Optional full HTML site:
 mvn surefire-report:report
 open target/site/surefire-report.html
 
-📂 Project Structure
-testng-maven-repo/
-├── .github/workflows/maven.yml   # GitHub Actions workflow
-├── pom.xml                       # Maven config with TestNG dependency
-├── src/
-│   └── test/
-│       ├── java/com/example/SimpleTest.java   # Sample TestNG test class
-│       └── resources/testng.xml               # TestNG suite config
-└── README.md
 
 ⚡ Features
 TestNG framework with annotations (@Test, @BeforeClass, etc.)
