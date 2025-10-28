@@ -11,7 +11,13 @@ It is part of a DevOps case study project showing how automated testing fits int
 git clone https://github.com/YOUR_USERNAME/testng-maven-repo.git
 cd testng-maven-repo
 
+2. Install Requirements
+JDK 11+
+Maven 3+
 
+Verify:
+java -version
+mvn -v
 
 
 3. Run Tests-> From IntelliJ IDEA ->Right-click SimpleTest.java → Run 'SimpleTest'
